@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.jpg">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!-- Logo -->
+        <div class="logo">
+            LIFE <span class="logotitle">WRAPPED</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop CTA Button -->
+        <button type="button" class="btn desktop-btn" onclick="window.location.href='form.html'">
+            Create My Wrapped →
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobileMenu">
+            ☰
+        </button>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+
+            <nav aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile CTA Button -->
+            <button type="button" class="btn" onclick="window.location.href='form.html'">
+                Create My Wrapped →
+            </button>
+
+        </div>
+
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p>Your Year. a BEAUTIFUL JOURNEY</p>
+            <h2>YOUR YEAR,</h2>
+            <h2>BEAUTIFULLY</h2>
+            <h1>REMEMBERED</h1>
+            <p>Turn your year into a story - not just a list of events. <br> Relive your moments, discover your
+                patterns,<br> and see the biggest pictures of your year.</p>
+
+            <button onclick="window.location.href='form.html'" class="btn">Create My Wrapped</button>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <div class="about-content">
+                <h2>
+                    MORE Than data.<br>
+                    It's your story.
+                </h2>
+
+                <p>
+                    Life Wrapped is a platform that allows you to create a
+                    personalized summary of your year. It helps you reflect on
+                    your experiences, achievements, and memories, and presents
+                    them in a visually appealing format.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="images/about_section.avif" alt="Life Wrapped yearly memories">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="features" id="features">
+
+        <!-- Left: Section Introduction -->
+        <div class="features-intro">
+
+            <span class="section-label">LIFE WRAPPED FEATURES</span>
+
+            <h2>
+                A Complete Year
+                in one beautiful story.
+            </h2>
+
+            <p>
+                From travel and fitness to learning and growth,
+                Life Wrapped brings everything together in an
+                interactive and emotional experience.
+            </p>
+
+            <a href="#all-features" class="btn">
+                Explore All Features
+                <span>→</span>
+            </a>
+
+        </div>
+
+
+        <!-- Right: Feature Cards -->
+        <div class="features-showcase">
+
+            <!-- Card 01 -->
+            <article class="feature-card">
+
+                <div class="feature-top">
+                    <span class="feature-number">01</span>
+                    <span class="feature-icon">📊</span>
+                </div>
+
+                <div class="feature-content">
+                    <h3>Yearly Insights</h3>
+
+                    <p>
+                        Discover your habits, milestones,
+                        achievements and memorable moments
+                        throughout the year.
+                    </p>
+                </div>
+
+                <div class="feature-image">
+                    <img src="images/insight.jpg" alt="Yearly insights visualization">
+                </div>
+
+            </article>
+
+
+            <!-- Card 02 -->
+            <article class="feature-card">
+
+                <div class="feature-top">
+                    <span class="feature-number">02</span>
+                    <span class="feature-icon">✈️</span>
+                </div>
+
+                <div class="feature-content">
+                    <h3>Travel Memories</h3>
+
+                    <p>
+                        Relive the places you visited,
+                        adventures you experienced and
+                        memories you created.
+                    </p>
+                </div>
+
+                <div class="feature-image">
+                    <img src="images/travel.jpg" alt="Travel memories">
+                </div>
+
+            </article>
+
+
+            <!-- Card 03 -->
+            <article class="feature-card">
+
+                <div class="feature-top">
+                    <span class="feature-number">03</span>
+                    <span class="feature-icon">💪</span>
+                </div>
+
+                <div class="feature-content">
+                    <h3>Health & Fitness</h3>
+
+                    <p>
+                        Track your fitness journey,
+                        workouts, progress and the
+                        healthy habits you built.
+                    </p>
+                </div>
+
+                <div class="feature-image">
+                    <img src="images/fitness.jpg" alt="Health and fitness progress">
+                </div>
+
+            </article>
+
+
+            <!-- Card 04 -->
+            <article class="feature-card">
+
+                <div class="feature-top">
+                    <span class="feature-number">04</span>
+                    <span class="feature-icon">🚀</span>
+                </div>
+
+                <div class="feature-content">
+                    <h3>Growth & Achievements</h3>
+
+                    <p>
+                        Celebrate your progress, learning,
+                        achievements and the person you
+                        became throughout the year.
+                    </p>
+                </div>
+
+                <div class="feature-image">
+                    <img src="images/growth.jpg" alt="Personal growth and achievements">
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-content">
+            <div class="content">
+                <p>
+                    How It Works
+                </p>
+                <h2>Three Simple Steps to Your Year in Review</h2>
+            </div>
+            <h1>→</h1>
+            <div class="content work">
+                <h2>1</h2>
+                <h3>Enter Your Year</h3>
+                <p>Add your year or use our example data</p>
+            </div>
+            <h1>→</h1>
+            <div class="content work">
+                <h2>2</h2>
+                <h3>We turn it into a story</h3>
+                <p>your year comes to life in a personalized narrative</p>
+            </div>
+            <h1>→</h1>
+            <div class="content work">
+                <h2>3</h2>
+                <h3>Share Your Year</h3>
+                <p>Download, share, or keep it as your personal story</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="#hero" class="footer-logo">
+                    LIFE <span>WRAPPED</span>
+                </a>
+
+                <p>
+                    Every year has a story.
+                    Make yours unforgettable.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Started -->
+            <div class="footer-cta">
+                <h3>Your Year, Your Story</h3>
+
+                <p>
+                    Turn your memories and achievements
+                    into a beautiful year in review.
+                </p>
+
+                <a href="form.html" class="footer-button">
+                    Create My Wrapped <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span> Life Wrapped.
+                All rights reserved.
+            </p>
+
+            <a href="#hero" class="back-to-top">
+                Back to Top ↑
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = mobileMenu.classList.toggle("active");
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll(".mobile-menu a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.remove("active");
+
+                menuToggle.textContent = "☰";
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.setAttribute("aria-label", "Open menu");
+            });
+
+        });
+    </script>
+</body>
+
+</html>

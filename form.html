@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Life Wrapped - Create Your Wrapped</title>
+
+    <link rel="stylesheet" href="CSS/form.css">
+</head>
+
+<body>
+
+    <main class="form-container">
+
+        <!-- Header -->
+        <section class="form-header">
+            <a href="index.html" class="back-btn">← Back</a>
+
+            <h1>Create Your <span>Life Wrapped</span></h1>
+
+            <p>
+                Tell us about your year and we'll turn your memories,
+                achievements and experiences into your personal yearly wrapped.
+            </p>
+        </section>
+
+
+        <!-- Form -->
+        <form id="wrappedForm">
+
+            <!-- Personal Information -->
+            <section class="form-section">
+
+                <h2>👤 About You</h2>
+
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="year">Wrapped Year</label>
+
+                    <select id="year" name="year" required>
+                        <option value="">Select year</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+            </section>
+
+
+            <!-- Travel -->
+            <section class="form-section">
+
+                <h2>✈️ Travel</h2>
+
+                <div class="input-group">
+                    <label for="trips">Number of Trips</label>
+
+                    <input
+                        type="number"
+                        id="trips"
+                        name="trips"
+                        min="0"
+                        placeholder="e.g. 5"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="favoritePlace">Favorite Place You Visited</label>
+
+                    <input
+                        type="text"
+                        id="favoritePlace"
+                        name="favoritePlace"
+                        placeholder="e.g. Manali"
+                    >
+                </div>
+
+            </section>
+
+
+            <!-- Fitness -->
+            <section class="form-section">
+
+                <h2>💪 Fitness</h2>
+
+                <div class="input-group">
+                    <label for="workouts">Total Workouts</label>
+
+                    <input
+                        type="number"
+                        id="workouts"
+                        name="workouts"
+                        min="0"
+                        placeholder="e.g. 120"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="fitnessGoal">Biggest Fitness Achievement</label>
+
+                    <input
+                        type="text"
+                        id="fitnessGoal"
+                        name="fitnessGoal"
+                        placeholder="e.g. Ran my first 10K"
+                    >
+                </div>
+
+            </section>
+
+
+            <!-- Books -->
+            <section class="form-section">
+
+                <h2>📚 Learning</h2>
+
+                <div class="input-group">
+                    <label for="books">Books Read</label>
+
+                    <input
+                        type="number"
+                        id="books"
+                        name="books"
+                        min="0"
+                        placeholder="e.g. 12"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="skill">New Skill Learned</label>
+
+                    <input
+                        type="text"
+                        id="skill"
+                        name="skill"
+                        placeholder="e.g. JavaScript"
+                    >
+                </div>
+
+            </section>
+
+
+            <!-- Entertainment -->
+            <section class="form-section">
+
+                <h2>🎬 Entertainment</h2>
+
+                <div class="input-group">
+                    <label for="movies">Movies Watched</label>
+
+                    <input
+                        type="number"
+                        id="movies"
+                        name="movies"
+                        min="0"
+                        placeholder="e.g. 35"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="songs">Favorite Song of the Year</label>
+
+                    <input
+                        type="text"
+                        id="songs"
+                        name="songs"
+                        placeholder="Enter your favorite song"
+                    >
+                </div>
+
+            </section>
+
+
+            <!-- Memories -->
+            <section class="form-section">
+
+                <h2>❤️ Your Year</h2>
+
+                <div class="input-group">
+                    <label for="bestMoment">Best Moment of the Year</label>
+
+                    <textarea
+                        id="bestMoment"
+                        name="bestMoment"
+                        rows="4"
+                        placeholder="What was your favorite moment this year?"
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="achievement">Biggest Achievement</label>
+
+                    <textarea
+                        id="achievement"
+                        name="achievement"
+                        rows="4"
+                        placeholder="What are you most proud of?"
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="lesson">Biggest Lesson Learned</label>
+
+                    <textarea
+                        id="lesson"
+                        name="lesson"
+                        rows="4"
+                        placeholder="What did this year teach you?"
+                    ></textarea>
+                </div>
+
+            </section>
+
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">
+                Create My Wrapped ✨
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="form.js"></script>
+</body>
+
+</html>

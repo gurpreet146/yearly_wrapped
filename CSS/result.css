@@ -1,0 +1,1357 @@
+
+/* =========================================================
+   LIFE WRAPPED — PREMIUM DARK THEME
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN SYSTEM
+========================================================= */
+
+:root {
+    --black: #030305;
+    --dark: #07070c;
+    --dark-2: #0c0c14;
+
+    --white: #ffffff;
+    --white-soft: #d8d8e4;
+    --gray: #8b8b9c;
+
+    --purple: #8b5cf6;
+    --purple-light: #b794ff;
+
+    --blue: #3b82f6;
+    --cyan: #22d3ee;
+
+    --pink: #ec4899;
+
+    --glass: rgba(255, 255, 255, 0.055);
+    --glass-hover: rgba(255, 255, 255, 0.085);
+
+    --border: rgba(255, 255, 255, 0.10);
+
+    --radius: 24px;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   3. MAIN
+========================================================= */
+
+.wrapped-container {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #030305;
+}
+
+
+/* =========================================================
+   4. SCREEN
+========================================================= */
+
+.wrapped-screen {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding:
+        60px
+        25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+
+        /* Purple glow */
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(124, 58, 237, 0.18),
+            transparent 28%
+        ),
+
+        /* Blue glow */
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(37, 99, 235, 0.15),
+            transparent 28%
+        ),
+
+        /* Pink glow */
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(236, 72, 153, 0.07),
+            transparent 30%
+        ),
+
+        #030305;
+
+    animation:
+        screenIn 0.8s var(--ease);
+}
+
+
+/* =========================================================
+   5. AMBIENT LIGHT
+========================================================= */
+
+.wrapped-screen::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(139, 92, 246, 0.22),
+            transparent 65%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        floatingGlow 10s ease-in-out infinite;
+}
+
+
+.wrapped-screen::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    bottom: -230px;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.18),
+            transparent 65%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        floatingGlow 12s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   6. SUBTLE CENTER GLOW
+========================================================= */
+
+.wrapped-screen {
+    background-image:
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(139, 92, 246, 0.045),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(124, 58, 237, 0.18),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(37, 99, 235, 0.15),
+            transparent 28%
+        ),
+
+        #030305;
+}
+
+
+/* =========================================================
+   7. HIDDEN
+========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   8. SMALL TITLE
+========================================================= */
+
+.small-title {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 25px;
+
+    color: #9f8cff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.32em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.7s ease 0.1s forwards;
+}
+
+
+/* =========================================================
+   9. HEADINGS
+========================================================= */
+
+h1,
+h2 {
+    position: relative;
+    z-index: 2;
+
+    font-weight: 900;
+
+    letter-spacing: -0.055em;
+
+    text-wrap: balance;
+}
+
+
+h1 {
+    max-width: 1100px;
+
+    font-size:
+        clamp(
+            4rem,
+            10vw,
+            8rem
+        );
+
+    line-height: 0.9;
+
+    margin-bottom: 30px;
+
+    animation:
+        titleReveal 0.9s var(--ease) 0.1s both;
+}
+
+
+h2 {
+    max-width: 1000px;
+
+    font-size:
+        clamp(
+            2.4rem,
+            6.5vw,
+            6rem
+        );
+
+    line-height: 1;
+
+    margin-bottom: 35px;
+
+    animation:
+        titleReveal 0.9s var(--ease) 0.15s both;
+}
+
+
+/* =========================================================
+   10. GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+    background:
+        linear-gradient(
+            100deg,
+            #ffffff 0%,
+            #b794ff 25%,
+            #8b5cf6 45%,
+            #60a5fa 70%,
+            #f0abfc 100%
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        gradientFlow 5s ease infinite;
+}
+
+
+/* =========================================================
+   11. YEAR
+========================================================= */
+
+.year {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 45px;
+
+    color: var(--gray);
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    animation:
+        fadeUp 0.7s ease 0.25s both;
+}
+
+
+/* =========================================================
+   12. DESCRIPTION
+========================================================= */
+
+.description {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 620px);
+
+    margin-bottom: 35px;
+
+    color: #9999aa;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    animation:
+        fadeUp 0.7s ease 0.25s both;
+}
+
+
+/* =========================================================
+   13. BIG NUMBER
+========================================================= */
+
+.big-number {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 35px;
+
+    font-size:
+        clamp(
+            8rem,
+            21vw,
+            16rem
+        );
+
+    font-weight: 950;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.09em;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 5%,
+            #c4b5fd 25%,
+            #8b5cf6 45%,
+            #3b82f6 75%,
+            #22d3ee 100%
+        );
+
+    background-size: 250% 250%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    filter:
+        drop-shadow(
+            0 0 35px
+            rgba(139, 92, 246, 0.25)
+        );
+
+    animation:
+        numberPop 0.9s var(--ease),
+        gradientFlow 5s ease infinite;
+}
+
+
+/* =========================================================
+   14. INFO CARD
+========================================================= */
+
+.info-card {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 620px);
+
+    padding: 28px 30px;
+
+    margin-bottom: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.025)
+        );
+
+    backdrop-filter:
+        blur(25px);
+
+    -webkit-backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0,0,0,0.5);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s ease,
+        background 0.4s ease;
+
+    animation:
+        cardIn 0.8s var(--ease) 0.25s both;
+}
+
+
+/* Card light */
+
+.info-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.12);
+
+    filter: blur(35px);
+}
+
+
+.info-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(167, 139, 250, 0.30);
+
+    background:
+        var(--glass-hover);
+}
+
+
+.info-card span {
+    position: relative;
+
+    color: #777789;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+
+.info-card strong {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   15. QUOTE CARD
+========================================================= */
+
+.quote-card {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 700px);
+
+    padding:
+        clamp(
+            30px,
+            5vw,
+            50px
+        );
+
+    margin-bottom: 35px;
+
+    border:
+        1px solid rgba(255,255,255,0.11);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139,92,246,0.13),
+            rgba(59,130,246,0.055),
+            rgba(255,255,255,0.025)
+        );
+
+    backdrop-filter:
+        blur(30px);
+
+    -webkit-backdrop-filter:
+        blur(30px);
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,0.55);
+
+    overflow: hidden;
+
+    animation:
+        cardIn 0.8s var(--ease) 0.25s both;
+
+    transition:
+        transform 0.4s var(--ease),
+        border-color 0.4s ease;
+}
+
+
+/* Top neon line */
+
+.quote-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 45%;
+    height: 2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #8b5cf6,
+            #60a5fa,
+            transparent
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(139,92,246,0.7);
+}
+
+
+.quote-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(139,92,246,0.30);
+}
+
+
+.quote-card p {
+    color: #eeeeF5;
+
+    font-size:
+        clamp(
+            19px,
+            3vw,
+            27px
+        );
+
+    line-height: 1.6;
+
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   16. BUTTONS
+========================================================= */
+
+.next-btn,
+.restart-btn {
+    position: relative;
+    z-index: 5;
+
+    padding:
+        16px 32px;
+
+    border: 1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #6d28d9,
+            #7c3aed,
+            #2563eb
+        );
+
+    background-size:
+        200% auto;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 35px
+        rgba(91,33,182,0.35);
+
+    transition:
+        transform 0.35s var(--ease),
+        box-shadow 0.35s ease,
+        background-position 0.5s ease;
+
+    animation:
+        fadeUp 0.7s ease 0.35s both;
+}
+
+
+/* Outer glow */
+
+.next-btn::before,
+.restart-btn::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #3b82f6,
+            #ec4899
+        );
+
+    z-index: -1;
+
+    filter: blur(18px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.next-btn:hover,
+.restart-btn:hover {
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    background-position:
+        100% center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(99,102,241,0.45);
+}
+
+
+.next-btn:hover::before,
+.restart-btn:hover::before {
+    opacity: 0.55;
+}
+
+
+.next-btn:active,
+.restart-btn:active {
+    transform:
+        scale(0.97);
+}
+
+
+.next-btn:focus-visible,
+.restart-btn:focus-visible {
+    outline:
+        2px solid #a78bfa;
+
+    outline-offset:
+        5px;
+}
+
+
+/* =========================================================
+   17. FINAL SCREEN
+========================================================= */
+
+.final-screen {
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(124,58,237,0.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(37,99,235,0.15),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236,72,153,0.12),
+            transparent 28%
+        ),
+
+        #030305;
+}
+
+
+/* =========================================================
+   18. FINAL MESSAGE
+========================================================= */
+
+.final-message {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 650px);
+
+    margin-bottom: 45px;
+
+    color: #9696a8;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   19. FINAL STATS
+========================================================= */
+
+.final-stats {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 800px);
+
+    margin-bottom: 42px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.final-stats div {
+    position: relative;
+
+    padding: 27px 15px;
+
+    border:
+        1px solid rgba(255,255,255,0.09);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s var(--ease),
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Individual glow */
+
+.final-stats div::before {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    top: -50px;
+    right: -30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139,92,246,0.15);
+
+    filter: blur(20px);
+}
+
+
+.final-stats div:hover {
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(255,255,255,0.075);
+
+    border-color:
+        rgba(139,92,246,0.28);
+}
+
+
+.final-stats strong {
+    position: relative;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            42px
+        );
+
+    font-weight: 900;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #a78bfa,
+            #60a5fa
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.final-stats span {
+    position: relative;
+
+    color: #737386;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   20. ANIMATIONS
+========================================================= */
+
+@keyframes screenIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes titleReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes numberPop {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.65)
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+@keyframes gradientFlow {
+
+    0% {
+        background-position:
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0% 50%;
+    }
+}
+
+
+@keyframes floatingGlow {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-30px, 25px)
+            scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   21. TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .wrapped-screen {
+        padding:
+            50px 22px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                3.5rem,
+                12vw,
+                6rem
+            );
+    }
+
+    h2 {
+        font-size:
+            clamp(
+                2.3rem,
+                9vw,
+                4.5rem
+            );
+    }
+
+    .final-stats {
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+   22. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .wrapped-screen {
+        padding:
+            35px 18px;
+    }
+
+
+    .small-title {
+        margin-bottom: 20px;
+
+        font-size: 9px;
+
+        letter-spacing:
+            0.22em;
+    }
+
+
+    h1 {
+        font-size:
+            clamp(
+                3rem,
+                15vw,
+                4.5rem
+            );
+
+        line-height: 0.92;
+    }
+
+
+    h2 {
+        font-size:
+            clamp(
+                2rem,
+                10vw,
+                3.2rem
+            );
+
+        line-height: 1.05;
+    }
+
+
+    .year {
+        margin-bottom: 32px;
+
+        font-size: 17px;
+    }
+
+
+    .description {
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+
+    .big-number {
+        font-size:
+            clamp(
+                7rem,
+                31vw,
+                10rem
+            );
+    }
+
+
+    .info-card {
+        padding:
+            23px 18px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .info-card strong {
+        font-size: 20px;
+    }
+
+
+    .quote-card {
+        padding:
+            28px 20px;
+
+        border-radius:
+            22px;
+    }
+
+
+    .quote-card p {
+        font-size: 18px;
+
+        line-height: 1.6;
+    }
+
+
+    .next-btn,
+    .restart-btn {
+        padding:
+            14px 24px;
+
+        font-size: 14px;
+    }
+
+
+    .final-message {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .final-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .final-stats div {
+        padding:
+            20px 10px;
+
+        border-radius:
+            17px;
+    }
+
+
+    .final-stats strong {
+        font-size: 30px;
+    }
+
+
+    .final-stats span {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   23. SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .wrapped-screen {
+        padding:
+            30px 14px;
+    }
+
+
+    h1 {
+        font-size:
+            2.7rem;
+    }
+
+
+    h2 {
+        font-size:
+            1.9rem;
+    }
+
+
+    .big-number {
+        font-size:
+            6.3rem;
+    }
+
+
+    .quote-card {
+        padding:
+            24px 16px;
+    }
+
+
+    .quote-card p {
+        font-size:
+            17px;
+    }
+
+
+    .final-stats {
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   24. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+}

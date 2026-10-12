@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Life Wrapped</title>
+
+    <link rel="stylesheet" href="CSS/result.css">
+</head>
+
+<body>
+
+    <main class="wrapped-container">
+
+        <!-- INTRO -->
+        <section class="wrapped-screen intro-screen">
+
+            <p class="small-title">YOUR YEAR, YOUR STORY</p>
+
+            <h1>
+                <span id="userName">Your</span>
+                <br>
+                <span class="gradient-text">Life Wrapped</span>
+            </h1>
+
+            <p class="year" id="year"></p>
+
+            <button class="next-btn" onclick="showNext()">
+                Let's Go ✨
+            </button>
+
+        </section>
+
+
+        <!-- TRAVEL -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR YEAR IN TRAVEL</p>
+
+            <h2>
+                You went on
+                <span class="gradient-text" id="trips">0</span>
+                trips.
+            </h2>
+
+            <div class="big-number" id="tripsBig">0</div>
+
+            <p class="description">
+                From new places to unforgettable memories,
+                every journey became part of your story.
+            </p>
+
+            <div class="info-card">
+                <span>📍 Favorite Place</span>
+                <strong id="favoritePlace">-</strong>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- FITNESS -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR FITNESS YEAR</p>
+
+            <h2>
+                You showed up
+                <span class="gradient-text" id="workouts">0</span>
+                times.
+            </h2>
+
+            <div class="big-number" id="workoutsBig">0</div>
+
+            <p class="description">
+                Every workout counted.
+                Every session helped you become stronger.
+            </p>
+
+            <div class="info-card">
+                <span>🏆 Biggest Achievement</span>
+                <strong id="fitnessGoal">-</strong>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- LEARNING -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR LEARNING YEAR</p>
+
+            <h2>
+                You read
+                <span class="gradient-text" id="books">0</span>
+                books.
+            </h2>
+
+            <div class="big-number" id="booksBig">0</div>
+
+            <p class="description">
+                You kept learning, growing and discovering
+                something new.
+            </p>
+
+            <div class="info-card">
+                <span>🧠 New Skill</span>
+                <strong id="skill">-</strong>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- ENTERTAINMENT -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR ENTERTAINMENT YEAR</p>
+
+            <h2>
+                You watched
+                <span class="gradient-text" id="movies">0</span>
+                movies.
+            </h2>
+
+            <div class="big-number" id="moviesBig">0</div>
+
+            <p class="description">
+                Your year had plenty of stories,
+                songs and moments worth remembering.
+            </p>
+
+            <div class="info-card">
+                <span>🎵 Favorite Song</span>
+                <strong id="songs">-</strong>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- BEST MOMENT -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR BEST MOMENT</p>
+
+            <h2 class="gradient-text">
+                A memory worth keeping.
+            </h2>
+
+            <div class="quote-card">
+                <p id="bestMoment">
+                    Your best moment will appear here.
+                </p>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- ACHIEVEMENT -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">YOUR BIGGEST WIN</p>
+
+            <h2>
+                Look how far
+                <span class="gradient-text">you've come.</span>
+            </h2>
+
+            <div class="quote-card">
+                <p id="achievement">
+                    Your biggest achievement will appear here.
+                </p>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                Next →
+            </button>
+
+        </section>
+
+
+        <!-- LESSON -->
+        <section class="wrapped-screen hidden">
+
+            <p class="small-title">THE LESSON</p>
+
+            <h2>
+                Your year
+                <span class="gradient-text">taught you...</span>
+            </h2>
+
+            <div class="quote-card">
+                <p id="lesson">
+                    Your biggest lesson will appear here.
+                </p>
+            </div>
+
+            <button class="next-btn" onclick="showNext()">
+                See My Final Wrapped →
+            </button>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section class="wrapped-screen hidden final-screen">
+
+            <p class="small-title">THAT WAS YOUR YEAR</p>
+
+            <h1>
+                <span id="finalName">Your</span>
+                <br>
+                <span class="gradient-text">Wrapped.</span>
+            </h1>
+
+            <p class="final-message">
+                Every trip, every workout, every lesson,
+                every memory made your year uniquely yours.
+            </p>
+
+            <div class="final-stats">
+
+                <div>
+                    <strong id="finalTrips">0</strong>
+                    <span>Trips</span>
+                </div>
+
+                <div>
+                    <strong id="finalWorkouts">0</strong>
+                    <span>Workouts</span>
+                </div>
+
+                <div>
+                    <strong id="finalBooks">0</strong>
+                    <span>Books</span>
+                </div>
+
+                <div>
+                    <strong id="finalMovies">0</strong>
+                    <span>Movies</span>
+                </div>
+
+            </div>
+
+            <button class="restart-btn" onclick="restartWrapped()">
+                Create Another Wrapped ↻
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="result.js"></script>
+
+</body>
+
+</html>
